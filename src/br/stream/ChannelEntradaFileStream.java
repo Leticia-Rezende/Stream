@@ -8,7 +8,7 @@ import java.nio.channels.FileChannel;
 public class ChannelEntradaFileStream {
     public static void main(String[] args) {
         String filePath = "C:\\Users\\Unifan\\Stream\\resources\\arquivo.txt";
-        try (FileInputStream fis = new FileInputStream(filePath)
+        try (FileInputStream fis = new FileInputStream(filePath);
             FileChannel fileChannel = fis.getChannel()){
 
             ByteBuffer buffer = ByteBuffer.allocate(1024); //cria um ByteBuffer para armazenar os dados lidos
@@ -29,3 +29,5 @@ public class ChannelEntradaFileStream {
         }
     }
 }
+
+

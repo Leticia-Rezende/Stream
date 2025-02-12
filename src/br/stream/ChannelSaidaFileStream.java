@@ -12,8 +12,8 @@ public class ChannelSaidaFileStream {
         String text = "Exemplo utilizando o FileChannel";
         try (
                 FileOutputStream fos = new FileOutputStream(filePath);
-                FileChannel fileChannel = fos.getChannel();
-        ){
+                FileChannel fileChannel = fos.getChannel()) {
+
             ByteBuffer buffer = ByteBuffer.allocate(1024);
             buffer.put(text.getBytes());
             buffer.flip();
